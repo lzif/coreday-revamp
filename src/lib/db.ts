@@ -144,47 +144,93 @@ export interface JournalEntry {
   updatedAt: Date;
 }
 
+// --------------------------------------------------
+// STRUKTUR PEMBUNGKUS (Pola dari db.ts)
+// --------------------------------------------------
+
+// Tipe item sekarang mencakup semua 13 tabel
+export type ItemType =
+  | 'transaction'
+  | 'category'
+  | 'debt'
+  | 'project'
+  | 'task'
+  | 'habit'
+  | 'habitEntry'
+  | 'savingGoal'
+  | 'savingEntry'
+  | 'note'
+  | 'tag'
+  | 'noteTag'
+  | 'journalEntry';
+
+// Pembungkus generik BaseItem
+export interface BaseItem<T extends ItemType, D> {
+  id: string;      // Kunci Primer STRING, harus unik (misalnya, nanoid())
+  type: T;
+  data: D;
+  updatedAt: number; // Unix timestamp untuk pengurutan
+}
+
+// Ekspor tipe yang dibungkus untuk setiap tabel
+export type TransactionItem = BaseItem<'transaction', Transaction>;
+export type CategoryItem = BaseItem<'category', Category>;
+export type DebtItem = BaseItem<'debt', Debt>;
+export type ProjectItem = BaseItem<'project', Project>;
+export type TaskItem = BaseItem<'task', Task>;
+export type HabitItem = BaseItem<'habit', Habit>;
+export type HabitEntryItem = BaseItem<'habitEntry', HabitEntry>;
+export type SavingGoalItem = BaseItem<'savingGoal', SavingGoal>;
+export type SavingEntryItem = BaseItem<'savingEntry', SavingEntry>;
+export type NoteItem = BaseItem<'note', Note>;
+export type TagItem = BaseItem<'tag', Tag>;
+export type NoteTagItem = BaseItem<'noteTag', NoteTag>;
+export type JournalEntryItem = BaseItem<'journalEntry', JournalEntry>;
+
 
 // --------------------------------------------------
-// DATABASE CLASS
+// KELAS DATABASE (Menggunakan 13 Tabel)
 // --------------------------------------------------
 
-export class CoredayDB extends Dexie {
-  // Define tables based on interfaces
-  transactions!: Table<Transaction>;
-  categories!: Table<Category>;
-  debts!: Table<Debt>;
-  projects!: Table<Project>;
-  tasks!: Table<Task>;
-  habits!: Table<Habit>;
-  habitEntries!: Table<HabitEntry>;
-  savingGoals!: Table<SavingGoal>;
-  savingEntries!: Table<SavingEntry>;
-  notes!: Table<Note>;
-  tags!: Table<Tag>;
-  noteTags!: Table<NoteTag>;
-  journalEntries!: Table<JournalEntry>;
+class AppDB extends Dexie {
+  // Deklarasi 13 tabel, masing-masing menggunakan tipe Item yang dibungkus
+  transactions!: Table<TransactionItem, string>;
+  categories!: Table<CategoryItem, string>;
+  debts!: Table<DebtItem, string>;
+  projects!: Table<ProjectItem, string>;
+  tasks!: Table<TaskItem, string>;
+  habits!: Table<HabitItem, string>;
+  habitEntries!: Table<HabitEntryItem, string>;
+  savingGoals!: Table<SavingGoalItem, string>;
+  savingEntries!: Table<SavingEntryItem, string>;
+  notes!: Table<NoteItem, string>;
+  tags!: Table<TagItem, string>;
+  noteTags!: Table<NoteTagItem, string>; // Kunci primer akan menjadi 'id' dari BaseItem
+  journalEntries!: Table<JournalEntryItem, string>;
 
   constructor() {
-    super('CoredayDB');
+    super('app'); // Nama database 'app'
     this.version(1).stores({
-      // Schema definition with indexes
-      // '++id' is the auto-incrementing primary key
-      transactions: '++id, type, categoryId, date',
-      categories: '++id, type',
-      debts: '++id, type, status',
-      projects: '++id, name',
-      tasks: '++id, projectId, parentId, status, priority, deadline',
-      habits: '++id, name',
-      habitEntries: '++id, habitId, date',
-      savingGoals: '++id, name',
-      savingEntries: '++id, goalId, date',
-      notes: '++id, isPinned, updatedAt',
-      tags: '++id, &name', // '&name' ensures tag names are unique
-      noteTags: '[noteId+tagId], noteId, tagId', // Compound primary key
-      journalEntries: '++id, &date', // 'date' is unique for daily entries
+      // Skema mendefinisikan 13 tabel.
+      // 'id' adalah kunci primer (dari BaseItem), 'updatedAt' diindeks.
+      transactions: 'id, updatedAt, data.categoryId, data.date',
+      categories:   'id, updatedAt, data.type',
+      debts:        'id, updatedAt, data.status',
+      projects:     'id, updatedAt',
+      tasks:        'id, updatedAt, data.projectId, data.status, data.deadline',
+      habits:       'id, updatedAt',
+      habitEntries: 'id, updatedAt, data.habitId, data.date',
+      savingGoals:  'id, updatedAt',
+      savingEntries:'id, updatedAt, data.goalId, data.date',
+      notes:        'id, updatedAt, data.isPinned',
+      tags:         'id, updatedAt, data.name',
+      // Untuk NoteTag, 'id' tetap menjadi kunci primer.
+      // Anda harus membuat query pada 'data.noteId' atau 'data.tagId' secara manual.
+      noteTags:     'id, updatedAt, data.noteId, data.tagId',
+      journalEntries: 'id, updatedAt, data.date',
     });
   }
 }
 
-export const db = new CoredayDB();
+export const db = new AppDB();
+
