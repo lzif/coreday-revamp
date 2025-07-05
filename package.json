@@ -34,5 +34,12 @@
 		"onlyBuiltDependencies": [
 			"esbuild"
 		]
+	},
+	"dependencies": {
+		"chart.js": "^4.5.0",
+		"dexie": "^4.0.11",
+		"jspdf": "^3.0.1",
+		"marked": "^16.0.0",
+		"papaparse": "^5.5.3"
 	}
 }

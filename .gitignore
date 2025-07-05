@@ -21,3 +21,9 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# AI Agent tooling, prompts, and internal rule sets
+.gemini/
+prompt_template.txt
+SVELTE5_CONVENTION.md
+AIBOT_SVELTE_RULES.md

@@ -1,63 +1,63 @@
-# Coreday — Modular Life Manager
+# Coreday — Your Modular Life Manager
 
-[![Status](https://img.shields.io/badge/status-pengembangan_aktif-green.svg)](https://github.com/your-username/coreday)
+[![Status](https://img.shields.io/badge/status-active_development-green.svg)](https://github.com/your-username/coreday)
 
-**Coreday** adalah aplikasi *offline-first* untuk mengelola semua aspek hidupmu dalam satu tempat. Fokus, simpel, powerful, dan sepenuhnya milikmu.
+**Coreday** is an offline-first app for managing every part of your life in one place. It's focused, simple, powerful, and completely yours.
 
-Aplikasi ini dirancang untuk bekerja sepenuhnya tanpa koneksi internet, dengan semua data tersimpan aman di perangkatmu. Kamu memiliki kontrol penuh atas informasi pribadimu.
+The app is designed to work entirely without an internet connection, with all your data stored securely on your device. You have full control over your personal information.
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
 ### 💸 Finance Tracker
-- Catat pemasukan & pengeluaran
-- Kategori & budgeting bulanan
-- Statistik & grafik interaktif
-- Opsional: utang-piutang
+- Log income & expenses
+- Monthly categories & budgeting
+- Interactive stats & charts
+- Optional: track debts and loans
 
 ### 📆 Time & Task Manager
 - Daily planner + calendar view
-- To-do list & proyek dengan subtask
-- Deadline, prioritas, dan notifikasi
+- To-do lists & projects with subtasks
+- Deadlines, priorities, and notifications
 
 ### 🪴 Habit Tracker
-- Checklist harian/mingguan
-- Streak, statistik, dan motivasi visual
-- Reminder opsional
+- Daily/weekly checklists
+- Streaks, stats, and visual motivation
+- Optional reminders
 
 ### 💰 Saving Progress
-- Buat target tabungan
-- Visualisasi progress
-- Auto-link dengan income
+- Create savings goals
+- Visualize your progress
+- Automatically link with your income
 
-### 📝 Note & Daily Journal
-- Markdown note & tag
-- Catatan harian terstruktur
-- Pencarian & pin fitur
+### 📝 Notes & Daily Journal
+- Markdown notes & tags
+- Structured daily entries
+- Search & pin features
 
 ---
 
-## 🚀 Fitur dalam Rencana
+## 🚀 On the Horizon
 
-Fitur-fitur berikut sedang dalam tahap perencanaan dan akan dikembangkan di masa mendatang:
+The following features are being planned and will be developed in the future:
 
-- **🪞 Reflective Journal / Mood Tracker:** Input mood harian, catatan reflektif singkat, dan grafik emosi mingguan.
-- **📊 Insight & Analytic Engine:** Analisa otomatis dari data kebiasaan, keuangan, mood, dll.
-- **⏱️ Pomodoro Timer + Focus Mode:** Fokus ke satu task dengan mode “no distraction”.
-- **🧩 Widget Dashboard:** Tampilan cepat modular yang bisa diatur (drag-n-drop).
-- **📦 Export & Backup:** Ekspor ke JSON, CSV, PDF dengan opsi backup lokal/manual.
-- **🎯 Goal Planning:** Breakdown goal menjadi subtask dengan timeline dan milestone.
+- **🪞 Reflective Journal / Mood Tracker:** Log your daily mood, write short reflective notes, and see weekly emotion charts.
+- **📊 Insight & Analytic Engine:** Get automatic analysis of your habits, finances, mood, and more.
+- **⏱️ Pomodoro Timer + Focus Mode:** Concentrate on a single task with a "no distraction" mode.
+- **🧩 Widget Dashboard:** A modular, drag-and-drop dashboard for a quick overview.
+- **📦 Export & Backup:** Export your data to JSON, CSV, or PDF with local/manual backup options.
+- **🎯 Goal Planning:** Break down big goals into subtasks with timelines and milestones.
 
-## 🛠️ Tumpukan Teknologi
+## 🛠️ Tech Stack
 
 - **Framework**: SvelteKit
-- **Bahasa**: TypeScript
+- **Language**: TypeScript
 - **Database**: Dexie.js (IndexedDB)
 - **Styling**: Tailwind CSS
 
-## 🤝 Kontribusi
+## 🤝 Contributing
 
-Kontribusi sangat kami hargai! Jika kamu tertarik untuk membantu mengembangkan Coreday, silakan baca [**Panduan Kontribusi**](CONTRIBUTING.md) untuk memulai.
+We'd love your help! If you're interested in contributing to Coreday, please read our [**Contribution Guide**](CONTRIBUTING.md) to get started.
 
-## 📄 Lisensi
+## 📄 License
 
-Proyek ini dilisensikan di bawah [Lisensi MIT](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
