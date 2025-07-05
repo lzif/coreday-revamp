@@ -82,7 +82,7 @@
 			</nav>
 			<div class="flex items-center gap-4">
 				<a
-					href="/habits"
+					href="/app"
 					class="inline-flex h-10 items-center justify-center rounded-lg bg-blue-600 px-6 text-sm font-semibold text-white shadow-md transition-colors hover:bg-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
 				>
 					Get Started
@@ -104,7 +104,7 @@
 					</p>
 					<div class="mt-10 flex items-center justify-center gap-4">
 						<a
-							href="/habits"
+							href="/app"
 							class="inline-flex h-12 items-center justify-center rounded-lg bg-blue-600 px-8 text-base font-semibold text-white shadow-md transition-colors hover:bg-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
 						>
 							Get Started
