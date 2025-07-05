@@ -1,23 +1,27 @@
-# Panduan Kontribusi untuk Coreday
+# Contributing to Coreday
 
-Terima kasih atas minatmu untuk berkontribusi pada Coreday! Kami sangat menghargai bantuan dari komunitas.
+Thanks for your interest in contributing to Coreday\! We really appreciate help from the community.
 
-## Cara Berkontribusi
+## How to Contribute
 
-### Melaporkan Bug
-Jika kamu menemukan bug, silakan buat laporan melalui [**formulir laporan bug**](/.github/ISSUE_TEMPLATE/bug_report.md). Pastikan untuk menyertakan langkah-langkah untuk mereproduksi masalah tersebut.
+### Reporting Bugs
 
-### Menyarankan Fitur
-Punya ide untuk fitur baru? Kami ingin mendengarnya! Ajukan idemu melalui [**formulir permintaan fitur**](/.github/ISSUE_TEMPLATE/feature_request.md).
+If you find a bug, please create a report using the [**bug report form**](https://www.google.com/search?q=/.github/ISSUE_TEMPLATE/bug_report.md). Be sure to include steps to reproduce the issue.
 
-### Proses Pull Request (PR)
-1.  **Fork** repositori ini.
-2.  Buat **branch** baru untuk fitur atau perbaikan bug (`git checkout -b fitur/nama-fitur` atau `git checkout -b fix/nama-bug`).
-3.  Lakukan perubahan dan **commit** (`git commit -m 'feat: Menambahkan fitur X'`).
-4.  **Push** ke branch-mu (`git push origin fitur/nama-fitur`).
-5.  Buka **Pull Request** ke branch `main` dari repositori ini.
+### Suggesting Features
 
-Pastikan PR-mu menjelaskan perubahan yang dibuat dengan jelas.
+Have an idea for a new feature? We'd love to hear it\! Submit your idea through our [**feature request form**](https://www.google.com/search?q=/.github/ISSUE_TEMPLATE/feature_request.md).
 
-## Kode Etik
-Semua kontributor diharapkan untuk mematuhi [**Kode Etik**](CODE_OF_CONDUCT.md) proyek ini.
+### Pull Request (PR) Process
+
+1.  **Fork** this repository.
+2.  Create a new **branch** for your feature or bug fix (`git checkout -b feature/feature-name` or `git checkout -b fix/bug-name`).
+3.  Make your changes and **commit** them (`git commit -m 'feat: Add X feature'`).
+4.  **Push** to your branch (`git push origin feature/feature-name`).
+5.  Open a **Pull Request** to this repository's `main` branch.
+
+Make sure your PR clearly explains the changes you've made.
+
+## Code of Conduct
+
+All contributors are expected to follow this project's [**Code of Conduct**](https://www.google.com/search?q=CODE_OF_CONDUCT.md).
