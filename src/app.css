@@ -6,64 +6,64 @@
  * Coreday Theme based on STYLE_GUIDE.md
  */
 @theme {
-  /* Color Palette */
-  --color-background: #f9fafb;
-  --color-foreground: #111827;
-  --color-muted: #9ca3af;
-  --color-card: #ffffff;
-  --color-primary: #2563eb;
-  --color-accent: #3b82f6;
-  --color-destructive: #dc2626;
-  --color-success: #16a34a;
+	/* Color Palette */
+	--color-background: #f9fafb;
+	--color-foreground: #111827;
+	--color-muted: #9ca3af;
+	--color-card: #ffffff;
+	--color-primary: #2563eb;
+	--color-accent: #3b82f6;
+	--color-destructive: #dc2626;
+	--color-success: #16a34a;
 
-  /* Typography */
-  --font-family-sans: 'Inter', sans-serif;
+	/* Typography */
+	--font-family-sans: 'Inter', sans-serif;
 
-  --font-size-h1: 2.25rem;
-  --font-size-h2: 1.875rem;
-  --font-size-h3: 1.5rem;
-  --font-size-body: 1rem;
-  --font-size-small: 0.875rem;
+	--font-size-h1: 2.25rem;
+	--font-size-h2: 1.875rem;
+	--font-size-h3: 1.5rem;
+	--font-size-body: 1rem;
+	--font-size-small: 0.875rem;
 
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--font-weight-semibold: 600;
+	--font-weight-normal: 400;
 
-  /* Borders & Radius */
-  --border-radius-sm: 0.25rem;
-  --border-radius-lg: 0.5rem;
-  --border-radius-xl: 0.75rem;
+	/* Borders & Radius */
+	--border-radius-sm: 0.25rem;
+	--border-radius-lg: 0.5rem;
+	--border-radius-xl: 0.75rem;
 }
 
 @layer base {
-  body {
-    font-family: var(--font-family-sans);
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-  }
+	body {
+		font-family: var(--font-family-sans);
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+	}
 
-  h1 {
-    font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-bold);
-  }
+	h1 {
+		font-size: var(--font-size-h1);
+		font-weight: var(--font-weight-bold);
+	}
 
-  h2 {
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-bold);
-  }
+	h2 {
+		font-size: var(--font-size-h2);
+		font-weight: var(--font-weight-bold);
+	}
 
-  h3 {
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-semibold);
-  }
+	h3 {
+		font-size: var(--font-size-h3);
+		font-weight: var(--font-weight-semibold);
+	}
 
-  p {
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-normal);
-  }
+	p {
+		font-size: var(--font-size-body);
+		font-weight: var(--font-weight-normal);
+	}
 
-  small {
-    font-size: var(--font-size-small);
-    font-weight: var(--font-weight-normal);
-  }
+	small {
+		font-size: var(--font-size-small);
+		font-weight: var(--font-weight-normal);
+	}
 }

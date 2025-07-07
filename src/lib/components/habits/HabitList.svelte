@@ -18,17 +18,14 @@
 <div class="space-y-3">
 	{#if habits.length > 0}
 		{#each habits as habit (habit.id)}
-			<HabitItem
-				{habit}
-				isCompleted={completedIds.has(habit.id!)}
-				{onToggle}
-				{onDelete}
-			/>
+			<HabitItem {habit} isCompleted={completedIds.has(habit.id!)} {onToggle} {onDelete} />
 		{/each}
 	{:else}
 		<div class="rounded-lg border border-dashed border-gray-300 p-8 text-center">
 			<h3 class="text-lg font-semibold text-gray-900">Belum Ada Kebiasaan</h3>
-			<p class="mt-1 text-sm text-gray-500">Mulai lacak dengan menambahkan kebiasaan baru di atas.</p>
+			<p class="mt-1 text-sm text-gray-500">
+				Mulai lacak dengan menambahkan kebiasaan baru di atas.
+			</p>
 		</div>
 	{/if}
 </div>

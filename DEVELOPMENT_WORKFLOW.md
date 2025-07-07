@@ -13,12 +13,12 @@ We don't build layer by layer (like doing all the UI first). Instead, we build i
 2.  **Build the Page (UI/Route)**: Create the main page file for the feature inside the `src/routes/` directory. For example: `src/routes/habits/+page.svelte`.
 
 3.  **Create Components**:
-    *   Build feature-specific components inside the `src/lib/components/[feature-name]/` directory. For example: `src/lib/components/habits/HabitItem.svelte`.
-    *   Implement all logic and styling according to the `STYLE_GUIDE.md` and `SVELTE5_CONVENTION.md`.
+    - Build feature-specific components inside the `src/lib/components/[feature-name]/` directory. For example: `src/lib/components/habits/HabitItem.svelte`.
+    - Implement all logic and styling according to the `STYLE_GUIDE.md` and `SVELTE5_CONVENTION.md`.
 
 4.  **Add Logic and Connect Data**:
-    *   Implement all the business logic needed for the feature.
-    *   Connect the components and pages to the `db` instance exported from `src/lib/db.ts` to perform CRUD (Create, Read, Update, Delete) operations.
+    - Implement all the business logic needed for the feature.
+    - Connect the components and pages to the `db` instance exported from `src/lib/db.ts` to perform CRUD (Create, Read, Update, Delete) operations.
 
 ## Iteration and Refactoring
 
@@ -26,9 +26,9 @@ Once a vertical slice is complete and working, move on to the next feature on th
 
 During the development process, keep an eye out for the following:
 
--   **Spot Common Patterns**: If you notice components (like buttons, modals, inputs) or functions that could be reused across multiple features, refactor them.
--   **Move to a Common Location**:
-    -   Move reusable components to `src/lib/components/common/`.
-    -   Move utility functions (like date formatters or calculators) to `src/lib/utils/`.
+- **Spot Common Patterns**: If you notice components (like buttons, modals, inputs) or functions that could be reused across multiple features, refactor them.
+- **Move to a Common Location**:
+  - Move reusable components to `src/lib/components/common/`.
+  - Move utility functions (like date formatters or calculators) to `src/lib/utils/`.
 
 The goal of this process is to build out functionality robustly while gradually creating a strong library of reusable components and utilities.

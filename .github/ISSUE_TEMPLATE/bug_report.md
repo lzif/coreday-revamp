@@ -1,7 +1,7 @@
 ---
 name: 🐞 Laporan Bug
 about: Buat laporan untuk membantu kami memperbaiki masalah
-title: "[BUG] "
+title: '[BUG] '
 labels: bug
 ---
 
@@ -10,6 +10,7 @@ Deskripsi yang jelas dan ringkas tentang bug tersebut.
 
 **Langkah Reproduksi**
 Langkah-langkah untuk mereproduksi perilaku:
+
 1. Pergi ke '...'
 2. Klik '....'
 3. Gulir ke bawah hingga '....'
@@ -25,6 +26,7 @@ Jika memungkinkan, tambahkan screenshot untuk membantu menjelaskan masalahmu.
 Tambahkan konteks lain tentang masalah di sini.
 
 **Spesifikasi:**
- - OS: [mis. iOS, Android, Windows]
- - Browser: [mis. Chrome, Safari]
- - Versi Aplikasi: [mis. 1.0.0]
+
+- OS: [mis. iOS, Android, Windows]
+- Browser: [mis. Chrome, Safari]
+- Versi Aplikasi: [mis. 1.0.0]

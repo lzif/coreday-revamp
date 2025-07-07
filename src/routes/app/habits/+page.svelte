@@ -24,7 +24,7 @@
 	 * @param {string} name - The name of the new habit.
 	 */
 	async function handleAddHabit(name: string) {
-	console.log(name)
+		console.log(name);
 		if (!name.trim()) return;
 		await db.habits.add({
 			name: name.trim(),

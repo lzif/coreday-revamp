@@ -9,27 +9,32 @@ The app is designed to work entirely without an internet connection, with all yo
 ## ✨ Key Features
 
 ### 💸 Finance Tracker
+
 - Log income & expenses
 - Monthly categories & budgeting
 - Interactive stats & charts
 - Optional: track debts and loans
 
 ### 📆 Time & Task Manager
+
 - Daily planner + calendar view
 - To-do lists & projects with subtasks
 - Deadlines, priorities, and notifications
 
 ### 🪴 Habit Tracker
+
 - Daily/weekly checklists
 - Streaks, stats, and visual motivation
 - Optional reminders
 
 ### 💰 Saving Progress
+
 - Create savings goals
 - Visualize your progress
 - Automatically link with your income
 
 ### 📝 Notes & Daily Journal
+
 - Markdown notes & tags
 - Structured daily entries
 - Search & pin features

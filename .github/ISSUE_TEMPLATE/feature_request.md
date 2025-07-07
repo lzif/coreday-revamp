@@ -1,7 +1,7 @@
 ---
 name: 💡 Permintaan Fitur
 about: Sarankan ide untuk proyek ini
-title: "[FITUR] "
+title: '[FITUR] '
 labels: enhancement
 ---
 

@@ -16,15 +16,20 @@ The main folder holds high-level configuration and documentation.
 
 This is the main directory where all of the application's source code lives.
 
-- **`src/routes/`**: This is the most important directory for the app's structure. SvelteKit uses file-based routing, which means every folder here (like `/finance` or `/habits`) automatically becomes a page or "route" in the app.
-    - `+page.svelte` is the file that gets rendered for a route.
-    - `+layout.svelte` defines a shared layout for pages within the same segment.
+- **`src/routes/`**: This directory is for marketing pages, such as the landing page (`/`), `/about`, or `/pricing`.
+  - `+page.svelte` is the file that gets rendered for a route.
+  - `+layout.svelte` defines a shared layout for pages.
+
+- **`src/routes/app/`**: This is the most important directory for the core application structure. SvelteKit uses file-based routing.
+  - **`[feature]/`**: Each folder here (like `/finance` or `/habits`) automatically becomes a feature route within the app (e.g., `/app/finance`).
+    - `+page.svelte`: The main page for the feature.
+    - `[ComponentName].svelte`: Feature-specific components are co-located here with their corresponding page.
+
 - **`src/lib/`**: This contains reusable code that can be used across the entire application.
-    - **`src/lib/components/`**: Where all Svelte components live.
-        - `/common`: For generic components like Buttons, Modals, and Inputs.
-        - `/[feature]`: For components specific to one feature, like `/finance` or `/habits`.
-    - **`src/lib/db.ts`**: A crucial file that defines the entire local database schema (using Dexie.js).
-    - **`src/lib/utils/`**: Contains reusable helper functions, for things like formatting dates or currency.
+  - **`src/lib/components/`**: Where generic, reusable Svelte components live (e.g., Buttons, Modals, Inputs). These components can be used anywhere in the project.
+  - **`src/lib/db.ts`**: A crucial file that defines the entire local database schema (using Dexie.js).
+  - **`src/lib/utils/`**: Contains reusable helper functions, for things like formatting dates or currency.
+
 - **`app.html`**: The main HTML shell of the application.
 - **`app.css`**: For global CSS styles.
 
